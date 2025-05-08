@@ -101,3 +101,61 @@ interface Name = string;
 ❌ //Error
 ```
 ---
+
+
+# Union '|' And Intersection '&' Type in TypeScript
+
+
+
+## 1. Union Type ( | ) :
+
+**Explanation:** A union Allows a value to be any one of seceral type
+
+### ✅ Example:
+
+```ts
+type ID = string | number;
+let userId: ID;
+userId = 123; // Ok
+userId = "Nahaz124"; // Ok
+userId = true; ❌ Error
+``` 
+---
+**Conclusion:** Union types are useful when a variable can hold more than one possible type, but only one at a time. In my example userId can be string or number, but not any other type.this makes code flexible with type safety    
+
+
+---
+
+
+## 2. Intersection ( & )
+
+**Explanation:** An Intersection type combines multiple types into one
+
+### ✅ Example:
+
+```ts
+type Person = {
+    name: string;
+    age: number;
+}
+
+type Id = {
+    id: number
+}
+type User = Id & Person
+
+const user1: User = {
+    id: 1,
+    name: 'Nahaz',
+    age: 22
+}
+console.log(user1)
+```
+
+---
+
+
+**Conclusion:** Intersection types useful when we want a value to satisfy multiple type requirements at the same time
+
+---
+

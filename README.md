@@ -102,6 +102,10 @@ interface Name = string;
 ```
 ---
 
+&nbsp;
+# Next Topic
+&nbsp;
+
 
 # Union '|' And Intersection '&' Type in TypeScript
 
